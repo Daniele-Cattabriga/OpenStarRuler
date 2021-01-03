@@ -323,7 +323,7 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cpp
 #Complete binary compile
 $(BINDIR)/$(BIN): makelibs $(OBJ_FILES) $(LIB_FILES) $(COPY_LIBS)
 	@mkdir -p $(BINDIR)
-	@$(CXX) $(CXXFLAGS) $(LDFLAGS) $(OBJ_FILES) $(LIB_FILES) -o $@
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(OBJ_FILES) $(LIB_FILES) -o $@
 
 makelibs:
 	@mkdir -p $(BINDIR)
